@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select class="plane_select">
+        {% for craft in aircraft %}
+            <option value="{{ craft }}">{{ craft }}</option>
+        {% endfor %}
+    </select>
+    <button type="button">Search</button>
+</body>
+</html>
