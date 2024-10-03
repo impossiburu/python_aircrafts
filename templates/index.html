@@ -4,13 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.21.13/dist/css/uikit.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.21.13/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.21.13/dist/js/uikit-icons.min.js"></script>
 </head>
 <body>
-    <select class="plane_select">
-        {% for craft in aircraft %}
-            <option value="{{ craft }}">{{ craft }}</option>
-        {% endfor %}
-    </select>
-    <button type="button">Search</button>
+    <div class="uk-card uk-card-body">
+        <form method="POST">
+            <select class="uk-select">
+                {% for aircrafts in aircrafts %}
+                    <option value="{{ aircrafts[0] }}">{{ aircrafts[1] }}</option>
+                {% endfor %}
+            </select>
+            <br><br>
+            <button type="submit" class="uk-button uk-button-default">Search</button>
+        </form>
+    </div>
+    <table class="uk-table uk-table-striped">
+        <thead>
+            <tr>
+                <th>Description</th>
+                <th>Designator</th>
+                <th>Manufacturer Core</th>
+                <th>Engine Count</th>
+                <th>WTC</th>
+                <th>Engine Type</th>
+                <th>Model Full Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                
+            </tr>
+        </tbody>
+    </table>
 </body>
 </html>
